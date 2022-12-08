@@ -1,0 +1,720 @@
+Objeto Math:
+
+	___Metodos___
+	- sqrt() - raiz cuadrada;
+	- cbrt() - raiz cubica;
+	- max() - devuelve el num. mas grande;
+	- min() - devuelve el num. mas pequeño;
+	- random();
+	- round() - redondear al num. entero mas cercano;
+	- fround() - redondea al flotante menos preciso;
+	- floor() - devuelve el entero mas grande menor que o igual a un número;
+	- trunc() - truncar;
+
+	___propiedades__
+	- PI
+	- SQRT1_2 - raiz de 1/2;
+	- SQRT2 - raiz de 2;
+
+	- E - constante de euler;
+	- LN2 - logaritmo natural de 2: 0.693;
+	- LN10 - ln de 10;
+	- LOG2E - log de E en base 2;
+	- LOG10E - logaritmo de E en base 10;
+
+##################################################################################################
+
+Otros métodos:
+	- variable.forEach(variable => console.log(variable))
+
+####################################################################################################
+Metodos de cadenas:
+
+	- concat() - junta 2 cadenas
+
+	- startsWith(), endsWith(), incudes(), indexOf(), lastIndexOf();
+	- split() - divide la cadena como queramos;
+	- substring() - devuelve un cacho de cadena;
+	- toLowerCase() - pasa a minuscula;
+	- toUpperCase() - pasa a mayúscula;
+	- toString() - convierte en String;
+	- trim() - elimina los espacios;
+	- trimEnd() - elimina espacios al final;
+	- trimStart() - elimina espacios al principo
+	- valueOf() - retorna el valor primitivo de un objeto String;
+
+Metodos de arrays:
+	
+	____Transformadores____
+	- pop() - elimina y devuelve el último elemento del array;
+	- shift() - elimina el primer elemento y lo devuelve;
+	- push() - agrega un elemento al array al final;
+	- reverse() - invierte el orden de los elemntos de un array;
+	- unshift() - agrega uno o más elementos de array y devuelve la longitud;
+	- sort() - ordena los elementos del array;
+	- splice() - cambia el array añadiendo o eliminando elementos del array;
+
+	____Accesores____
+	- join() - une todos los elementos del array y devuelve un String;
+	
+	___Repeticion___
+	- filter() - ejecuta la funcion asignada para cada elementi del array;
+	- forEach() - ejecuta la funcion asignada para cada elemento del array;
+
+###################################################################################################
+
+Metodos de consola:
+
+console.clear() - limpiar la consola;
+	console.error() - (se ejecuta en el codigo) error(String s)
+	console.info() - emite un mensaje informativo;
+	console.log() - emite un mensaje de depuracion, cas identico a info();
+	console.table() - hace una tabla a partir de un array;
+	console.warn() - mensaje de cuidado;
+	console.dir() - info mejorado++, muy útil;
+	console.count() - sirve para contar cuantas veces se ha ejecutado .count();
+	console.group() - para crear un grupo en consola console.group(String nombreGrupo);
+	console.groupEnd() - Acabar el grupo;
+	
+	console.time() - habilitas la cuenta, .timeLog() inicias la cuenta , .timeEnd() acabas la cuenta; se usa en -->
+--> el codigo para contar;
+
+	___Cambiar el estilo de letra___
+	console.log(%cString mensaje, "color: red;", "background-color: #fff", "padding: 30px");
+
+#################################################################################################
+
+Seleccionar Elementos:
+
+	- document.getElementbyId("nombre de ID");
+	- document.getElementsbyTagName("nombre de la etiqueta");
+	- document.querySelector(".nombreClase / #nombreID");
+
+#####################################################################################################
+
+Metodos editar elementos:
+	- getAttribute("atributo");
+	- setAttribute("atributo", "nuevo valor")
+	- removeAttribute("atributo");
+
+#######################################################################################################
+
+Atributos globales:
+	- contentEditable - indica si el elemento puede ser modificable;
+	- dir - indica la direccionalidad del texto;
+	- hidden - indica si el elemento aún no es relevante;
+	- style - contiene declaraciones de estilo css para ser aplicadas al elemento;
+	- tabindex - Contiene un texto con información relacionanda al elemento al que pertenece.
+	- title - titulo que s emuestra al poner el cursor sobre una imagen o elemento en el DOM;
+
+#######################################################################################################
+
+Atributos de inputs:
+	- classname
+	- value
+	- type
+	- accept
+	- form
+	- minlenght
+	- placeholder
+	- required : sirve para qu eno puedas enviar informacion vacia al input
+
+	Ejemplo: 
+		const input = document.querySelector(".input");
+		input.type = "color";
+
+########################################################################################################
+
+Clases, classList y Metodos de classlist:
+	- classList.add() - añade una clase
+	- remove() - borra una clase 
+	- item() - devuelve la clase del elemento especificado
+		titulo.classList.item(1); si tiene muchas clases se indica con numeros como parametros
+		como se haría con una matriz
+
+	- contains() - verifica si ese elemento posee o no la clase especificada
+	- replace() - remplaza una clase por otra
+	- toggle() - si no tiene la clase especificada, la agrega, y si ya la tinene entonces la elimina
+
+########################################################################################################
+
+Obtener y modificar Elementos:
+	- textContent; dev uelve el texto del nodo indicado NO HTML
+	- innerHTML; devuelve el contenido html (se puede mostrar con un alert())
+	- outerHTML; devuelve el contenido html incluyendo la etiqueta que engloba el texto. (mostrar con alert())
+
+########################################################################################################
+
+Crear elementos: 
+	- document.createElement("elemento en mayusculas") - el perámetro debe ser en mayúsculas todo
+	- document.createTextNode() - crear texto dentro de una etiqueta
+	- document.createDocumentFragment() - ejemplo de uso en mi github: repositorio HTML-CSS carpeta:
+						usar createdocumentfragment()
+	- document.appendChild() - meter en una etiqueta un texto creado por ej. por createTextNode
+
+########################################################################################################
+
+Obtencion y modificacion de Childs (hijos):
+	- firstElementChild - primer elemento hijo
+	- lastElementChild - ultimo elemento hijo
+	- childNodes - devuelve todos los nodos en forma de lista
+	- children - devuelve únicamente las etiquetas html	
+
+########################################################################################################
+
+Metodos Childs(hijos):
+	- appendChild() - sirve para meter un texto en un elemento html / o sinó para meter un elemento en una clase
+	- replaceChild() - sirve para remplazar un elemento hijo
+	- removeChild() - sirve para remover un elemento hijo	
+	- hasChildNodes() - sirve para comprovar si el elemto has or hasn't childnodes.
+
+########################################################################################################
+
+propiedades de parents (padres):
+	- parentElement - para saber el elemento padre
+	- parentNode - para saber el nodo padre
+
+########################################################################################################
+
+Propiedades de Siblings(hermanos):
+	- nextSibling
+	- previousSibing
+	- nextElementSibling
+	- previousElementsSibling
+
+########################################################################################################
+
+Nodo - extras:
+	- closest()
+
+########################################################################################################
+
+Window:
+	- open()
+	- close()
+	- closed
+	- stop
+	- alert()
+	- print()
+	- prompt()
+	- confirm()
+
+	- screen
+	- screenLeft
+	- screenTop
+	- scrollX
+	- scrollY
+	- scroll()
+
+	- resizeBy()
+	- resizeTop()
+	- moveBy()
+	- moveTop()
+
+	- objetos barprop:
+			_ locationbar
+			_ manubar
+			_ personalbar
+			_ scrollbars
+			_ statusbars
+			_ toolbar
+
+##########################################################################################################
+
+widow Location
+	- window.location.href ----> devuelve el href de la pagina actual
+	- window.location.hostname ---> devuelve el nombre del dominio del servidor web
+	- window.location.pathname ---> devuelve la ruta y el nombre de archivo de la página actual
+
+
+###############################################################################################################
+
+Eventos:
+	- variable.addEventListener("evento", function name  o sinó ()=> funcion flecha, true/false); true simplemente da prioridad a su ejecucion
+	- variable.removeEventListener("evento", function name  o sinó ()=> funcion flecha);
+
+	- stopPropagation() - Evitas que si hay 2 o mas eventos en un contenedor se realicen uno detras del otro.
+
+	EJEMPLO:
+	const contenedor = querySelector(".contenedor");
+	contenedor.addEventListener("click", (e)=> {
+		e.stopProgagation();
+	});
+
+	*Eventos de mouse:
+		- "click"
+		- "dblclick"
+		- "mouseover"
+
+	*Evendos de Key:
+		- keydown
+		- keypress
+		- onkeyup
+
+	*Eventos de Interfaz:
+		- error - cunado un video o una img carga mal
+		- load - cunado un objeto se ha cargado
+		- beforeunload - ocurre antes de que se cargue el documento
+		- unload - ocurre una vez la pagina ha sido cargado
+		- resize - cunado se cambia el tamaño de vista del documento
+		- scroll - cunado se hace scroll
+		- select - despues de q el usiario seleccione algún texto de <input> o <textarea>
+
+##################################################################################################################
+Temporizador: 
+	- setTimeout(rowFunction, tiempo en milisegundosg) -- clearTimeout(constante,variable)
+ 	- setInterval(rowFunction, tiempo) reitera una funcion cada cierto tiempo -- clearInterval(variable)
+
+#################################################################################################################
+
+JSON:
+
+	- JSON.stringify : sirve para serializar un objeto;
+	- JSON.parse : sirve para deserializar;
+
+
+###################################################################################################################
+
+Fetch:
+
+	- fetch("url"); por defecto fetch tiene el modo "GET"
+	- text(); sirve para extraer el texto de una peticion .fetch haciendo uso de then()
+	- json(); sirve para extraer el texto json d euna peticion .fetch con uso de then()
+	- blob();
+	- formData();
+	- arrayBuffer();
+
+----------------------------------------------------------------------------------------------------
+	text():
+
+let peticion = fetch("https://reqres.in/api/unknown/2")
+    .then(res=>res.text())
+    .then(res=> console.log(JSON.parse(res)));
+
+----------------------------------------------------------------------------------------------------
+	json():
+
+let peticion = fetch("https://reqres.in/api/unknown/2")
+    .then(res=>res.json())
+    .then(res=> console.log(JSON.parse(res)));
+
+-----------------------------------------------------------------------------------------------------
+	Metodo POST:
+
+let peticion = fetch("https://reqres.in/api/users", {
+    method: "POST",
+    body: JSON.stringify({
+        "nombre": "Urimemo",
+        "cuenta": "elcriyo@gmail.uri"
+    }),
+    headers: {"Content-type" : "application/json"}
+})
+    .then(res=>res.json())
+    .then(res=> console.log(res));
+
+
+###############################################################################################################
+
+Libreria AXIOS:
+	copiar la linea de codigo del enlace: https://axios-http.com/docs/intro
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	
+	- axios("fichero o data"); no necesita hacer .then(res=>res.josn());
+	- axios.post([...]) para cambiar get(Por defecto) a post 	
+
+------------------------------------------------------------------------------------------------------------
+	axios:
+		axios("info.txt").then(res=>console.log(res.data));
+
+################################################################################################################
+
+------------------------------------------------------------------------------------------------------
+Funcion async con await y fetch:
+
+	const getName = async ()=> {
+
+	    peticion = await fetch("info.txt");
+    	resultado = await peticion.json();
+    	console.log(resultado);  
+	}
+
+	getName();
+
+---------------------------------------------------------------------------------------------------------
+
+#################################################################################################################
+
+Prototipos (se usan despues de un objeto, un string, aray, o lo que sea):
+
+	- .prototype.__proto__; (se usa normalmente para funciones);
+	- .__proto__; (para casi todo);
+
+################################################################################################################
+
+Desestructurar un array:
+	- operador ...array;
+		EJMPLO:
+			array = ["hola","como","estas"];
+			console.log(...array);
+
+#################################################################################################################
+
+Objeto Date:
+	- getDate();
+	- getDays();
+	- getMonth();
+	- getYear();
+	- getHours();
+	- getMinutes();
+	- getSeconds();
+
+------------------------------------------------------------------------------------------------------
+
+Crear una Reloj:
+
+const faddZero = n => {
+    if (n.toString().length < 2) return "0".concat(n);
+    return n;
+}
+
+const factualizarHora = ()=> {
+    const time = new Date();
+    let hora = faddZero(time.getHours());
+    let minutos = faddZero(time.getMinutes());
+    let segundos = faddZero(time.getSeconds()); 
+    document.querySelector(".hora").textContent = hora;
+    document.querySelector(".min").textContent = minutos;
+    document.querySelector(".sec").textContent = segundos;
+}
+
+factualizarHora();
+
+setInterval(() => {
+    factualizarHora();
+}, 1000);
+
+
+------------------------------------------------------------------------------------------------------
+##############################################################################################################
+
+localStorage & sessionStorage:
+	- .setItem(stringNombre,stringValor);
+	- .getItem(sringNombre); para obtener el valor; 
+	- .reomveItem(stringNombre);
+	- .clear(); borra todo el storage,
+
+##################################################################################################################
+
+Drag & Drop (Eventos de EventListener):
+
+	- Eventos del Objeto:
+		- dragstart
+		- drag
+		- dragend
+
+		- dragover
+		- dragleave
+
+####################################################################################################################
+
+Geolocation:
+(se usa navigator par acceder: //navigator.geolocation//);
+
+	- getCurrentPosition();
+		parametros: (position, error, options)
+		propiedades de opcion (enableHightAccuracy, timeout, maximumAge)
+
+	- watchPosition(); posicion en tiempo real;
+
+------------------------------------------------------------------------------------------------------------
+Como geolocalizar a alguien:
+
+	const posicion = navigator.geolocation;
+
+	const localizar = (pos)=> {
+	    console.log(pos)
+	}
+
+	const error = ()=> console.log(e);
+
+	const options = {
+	    maximumAge:0,
+	    timeout: 300,
+	    enablehigthAccuracy: true
+	}
+
+	posicion.getCurrentPosition(localizar,error, options);
+
+------------------------------------------------------------------------------------------------------------
+##########################################################################################################################
+
+Historial:
+
+	- back() (vuelve hacia atras);
+	- forward (va hacia alante);
+	- tamaño del historial con //history.length//
+	- go() (va al sitio indicado con un numero relativo)
+	- pushState({nombre: string}, string, "?url_para_añadir") (modifica la url y conserva la info)
+	- state y popstate
+	- replaceState (modifica la url y no la conserva)
+
+###########################################################################################################################
+
+File Reader:
+	- new FileReader();
+	- readAsText();
+	- readAsDataURL();
+
+------------------------------------------------------------------------------------------------------------------------------
+Como seleccionar un archivo y leerlo:
+
+	//input type="file" id="archivo"
+const archivo = document.getElementById("archivo");
+
+archivo.addEventListener("change", ()=>{
+    leerArchivo(archivo.files[0]);
+})
+
+const leerArchivo = (ar) =>{
+    const reader = new FileReader();
+    reader.readAsText(ar);
+    reader.addEventListener("load", e => console.log(e));
+}
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+#################################################################################################################################
+
+IndexedDB:
+	const dataBase = indexedDB;
+	- open(string, num); Sirve para crear una base de datos o abrirla si ya existe;
+
+	Eventos:
+		- "success",
+		- "error",
+		- "upgradeneeded";
+
+-----------------------------------------------------------------------------------------------------------
+___Crear Tabla:___
+
+dataB.addEventListener("upgradeneeded", ()=> {
+   console.log("Se ha creado la base");
+  const db = dataB.result;
+  	db.createObjectStore("nombres", {
+ 	autoIncrement: true
+ 	})
+});
+
+-------------------------------------------------------------------------------------------------------
+____Almacenar Objetos:___
+
+const addObjeto = objeto => {
+    const db = dataB.result;
+    const IDBtransaction = db.transaction("nombres", "readwrite");
+    const  objectStore = IDBtransaction.objectStore("nombres");
+    objectStore.add(objeto);
+    IDBtransaction.addEventListener("complete", ()=> console.log("Transacción Ok"));
+}
+
+---------------------------------------------------------------------------------------------------------
+___Leer los objetos___:
+
+const leerObjeto = ()=>{
+    const db = dataB.result;
+    const IDBtransaction = db.transaction("nombres", "readonly");
+    const objectStore = IDBtransaction.objectStore("nombres");
+    const cursor = objectStore.openCursor();
+    cursor.addEventListener("success", ()=> {
+        console.log(cursor.result.value);
+        cursor.result.continue();
+    })
+}
+
+----------------------------------------------------------------------------------------------------------
+___Modificar Objetos___:
+
+const modObject = (key,obj) =>{
+    const db = dataB.result;
+    const trans = db.transaction("sujetos", "readwrite");
+    const objectStore = trans.objectStore("sujetos");
+    objectStore.put(obj, key);
+
+    trans.addEventListener("complete", ()=> console.log("Me cago en la *** funciona"));
+}
+
+----------------------------------------------------------------------------------------------------------
+___Delete Objetos___:
+
+const delObject = (key) =>{
+    const db = dataB.result;
+    const trans = db.transaction("sujetos", "readwrite");
+    const objectStore = trans.objectStore("sujetos");
+    objectStore.delete(key);
+
+    trans.addEventListener("complete", ()=> console.log("Me cago en la *** funciona"));
+}
+
+####################################################################################################################
+
+Match media: (viene siendo  lo mismo que)=> @media only screen and (max-width: 500px) {metodos}
+
+	- matchMedia(); => matchMedia("(max-width: 500px)");
+	- propiedad match;
+	- evento onchange;
+
+-----------------------------------------------------------------------------------------------------------
+
+Ejemplo de match media:
+
+const mq = matchMedia("(max-width: 500px)");
+mq.addEventListener("change", ()=> console.log("La resolucuion ha cambiado"));
+
+-----------------------------------------------------------------------------------------------------------
+
+####################################################################################################################
+
+Intersection observer: (sirve para ver si un elemento es visible en el viewport del navegador)
+
+####################################################################################################################
+
+Notifications:
+
+	- Notification.requestPermission;
+	- Notification.permission;
+	- Notification
+
+####################################################################################################################
+
+WebWorkers:
+
+	- Tipos: Dedicated Worker, Shared, Service & Abstract Worker;
+	- Worker(); constructor de dedicated worker;
+
+####################################################################################################################
+
+Memoizer: (Para no gastar tiempo y hacer la misma operacion varias veces en poco tiempo[Para optimizar])
+
+####################################################################################################################
+
+Caché:
+---------------------------------------------------------------------------------------------------------------
+caches.open("Base-cache").then(cache => {
+    cache.add("index.html");
+})
+---------------------------------------------------------------------------------------------------------------
+caches.open("Base-cache").then(cache => {
+    cache.addAll(["index.html","style.css","codigo.js"]);
+})
+---------------------------------------------------------------------------------------------------------------
+caches.open("Traficantes-2").then(cache => {
+    cache.match("index.html").then(archivo => console.log(archivo));
+})
+---------------------------------------------------------------------------------------------------------------
+caches.open("Traficantes-2").then(cache => {
+    cache.matchAll("index.html").then(archivo => console.log(archivo));
+})
+---------------------------------------------------------------------------------------------------------------
+caches.open("Traficantes-2").then(cache => {
+    cache.keys().then(res=> console.log(res));
+})	
+
+#############################################################################################################################
+
+Servi Workers:
+
+//code.js
+navigator.serviceWorker.register("sw.js");
+navigator.serviceWorker.ready.then(res=> res.active.postMessage("Hola a uri"));
+
+navigator.serviceWorker.addEventListener("message", e => {
+    console.log(e.data);
+})
+
+//sw.js
+
+self.addEventListener("install", e=> {
+    console.log("instalando el service Worker");
+})
+
+
+self.addEventListener("activate", ()=> {
+    caches.keys().then(key=> {
+        return Promise.all(
+            key.map(cache=> {
+                if (cache !== version) {
+                    console.log("Se ha deleteado la version antigua");
+                    return caches.delete(cache);
+                }
+            })
+        )
+    })
+
+self.addEventListener("message", e=> {
+    console.log(e.data);
+    e.source.postMessage("Hola Brotha");
+})
+
+#############################################################################################
+
+Cookies:
+
+__Crear Cookie:
+	- document.cookie = "valor1=valor2";
+
+__Crear Cookie con una funcion:
+
+const newFechaUTC = dias => {
+    let fecha = new Date();
+    fecha.setTime(fecha.getTime() + dias*1000*60*60*24);
+    return fecha.toUTCString();
+}
+
+const crearCookie = (name,dias) => {
+    expires = newFechaUTC(dias);
+    document.cookie = `${name}; expires=${expires}`;
+    console.log("La coki se ha creado correctamente");
+}		
+
+__Leer las cookies:
+//Facil->
+
+console.log(document.cookie);
+
+//Chunga->
+
+const obtenerCookie = cookieName => {
+    let cookies = document.cookie;
+    cookies = cookies.split(";");
+    for (let i = 0; i < cookies.length; i++) {
+        cookie = cookies[i].trim();
+        if (cookie.startsWith(cookieName)) {
+            return cookie.split("=")[1];
+        }
+        
+    }
+}
+
+#############################################################################################
+
+Canvas:
+
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+ctx.strokeStyle = "#45e";
+ctx.fillStyle = "#444"
+ctx.lineWidth = "6";
+ctx.strokeRect(30,50, 400, 200);
+ctx.fillRect(20,40, 400, 200);
+ctx.lineTo(100, 300);
+ctx.lineTo(100, 350);
+ctx.lineTo(300, 350);
+ctx.lineTo(100, 440);
+ctx.stroke();
+ctx.closePath();
+ctx.beginPath();
+
+ctx.arc(120, 150, 200, 10, 40);
+ctx.stroke();
+
+#################################################################################################

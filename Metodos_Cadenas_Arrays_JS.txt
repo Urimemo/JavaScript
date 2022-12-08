@@ -1,0 +1,32 @@
+Metodos de cadenas:
+
+	- concat() - junta 2 cadenas
+
+	- startsWith(), endsWith(), incudes(), indexOf(), lastIndexOf();
+	- split() - divide la cadena como queramos;
+	- substring() - devuelve un cacho de cadena;
+	- toLowerCase() - pasa a minuscula;
+	- toUpperCase() - pasa a mayúscula;
+	- toString() - convierte en String;
+	- trim() - elimina los espacios;
+	- trimEnd() - elimina espacios al final;
+	- trimStart() - elimina espacios al principo
+	- valueOf() - retorna el valor primitivo de un objeto String;
+
+Metodos de arrays:
+	
+	____Transformadores____
+	-pop() - elimina y devuelve el último elemento del array;
+	- shift() - elimina el primer elemento y lo devuelve;
+	- push() - agrega un elemento al array al final;
+	- reverse() - invierte el orden de los elemntos de un array;
+	- unshift() - agrega uno o más elementos de array y devuelve la longitud;
+	- sort() - ordena los elementos del array;
+	- splice() - cambia el array añadiendo o eliminando elementos del array;
+
+	____Accesores____
+	- join() - une todos los elementos del array y devuelve un String;
+	
+	___Repeticion___
+	- filter() - ejecuta la funcion asignada para cada elementi del array;
+	- forEach() - ejecuta la funcion asignada para cada elemento del array;

@@ -1,0 +1,18 @@
+Consola:
+
+	console.clear() - limpiar la consola;
+	console.error() - (se ejecuta en el codigo) error(String s)
+	console.info() - emite un mensaje informativo;
+	console.log() - emite un mensaje de depuracion, cas identico a info();
+	console.table() - hace una tabla a partir de un array;
+	console.warn() - mensaje de cuidado;
+	console.dir() - info mejorado++, muy útil;
+	console.count() - sirve para contar cuantas veces se ha ejecutado .count();
+	console.group() - para crear un grupo en consola console.group(String nombreGrupo);
+	console.groupEnd() - Acabar el grupo;
+	
+	console.time() - habilitas la cuenta, .timeLog() inicias la cuenta , .timeEnd() acabas la cuenta; se usa en -->
+--> el codigo para contar;
+
+	___Cambiar el estilo de letra___
+	console.log(%cString mensaje, "color: red;", "background-color: #fff", "padding: 30px");
